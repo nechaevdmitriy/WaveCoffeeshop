@@ -17,6 +17,9 @@ class ModuleBuilder {
         view.dataSource = adapter
         view.configure()
         
+        let vm = MainViewModeL()
+        view.onEffect = vm.onEffect
+        
         viewController.view = view
         
         return viewController
